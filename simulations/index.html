@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Modules | STEM</title>
+    <title>Course Modules | Cloud Sync</title>
     <style>
         body { font-family: sans-serif; background: #050a0f; color: #ccd6f6; margin: 0; padding: 10px; }
-        .back { color: #64ffda; text-decoration: none; font-size: 12px; display: block; margin-bottom: 10px; }
-        h2 { font-size: 16px; border-bottom: 1px solid #233554; padding-bottom: 5px; margin: 15px 0 10px 0; }
-        .list { display: flex; flex-direction: column; gap: 5px; }
-        .item { background: #112240; padding: 10px; border-radius: 4px; text-decoration: none; 
-                color: #fff; display: flex; justify-content: space-between; align-items: center; border: 1px solid #112240; }
-        .item:hover { border-color: #64ffda; }
-        .item span { font-size: 12px; color: #8892b0; }
+        .status-bar { background: #112240; padding: 8px 15px; border-radius: 4px; font-size: 11px; color: #64ffda; margin-bottom: 15px; display: flex; justify-content: space-between; border: 1px solid #233554; }
+        h2 { font-size: 14px; color: #8892b0; text-transform: uppercase; margin: 20px 0 10px 0; letter-spacing: 1px; }
+        .list { display: flex; flex-direction: column; gap: 6px; }
+        .item { background: #112240; padding: 12px; border-radius: 4px; text-decoration: none; color: #fff; display: flex; justify-content: space-between; align-items: center; border: 1px solid transparent; font-size: 14px; }
+        .item:hover { border-color: #64ffda; background: #1d2d44; }
+        .tag { font-size: 10px; background: #233554; padding: 2px 6px; border-radius: 3px; color: #64ffda; font-weight: bold; }
+        .back { color: #64ffda; text-decoration: none; font-size: 12px; margin-bottom: 10px; display: inline-block; }
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back">← Back to Home</a>
+    <a href="../index.html" class="back">← Dashboard</a>
     
-    <h2>Science Labs</h2>
-    <div class="list">
-        <a href="physics/kinetics/index.html" class="item">Physics: Vector Momentum <span>Lab 4.1</span></a>
-        <a href="physics/angular/index.html" class="item">Physics: Angular Velocity <span>Lab 4.2</span></a>
+    <div class="status-bar">
+        <span>STATUS: CONNECTED</span>
+        <span>SERVER: US-WEST-DB01</span>
+        <span>ENCRYPTION: AES-256</span>
     </div>
 
-    <h2>Language Labs</h2>
+    <h2>Science & Labs</h2>
     <div class="list">
-        <a href="language/vocab/index.html" class="item">Vocabulary Synthesis <span>Module 1</span></a>
+        <a href="physics/kinetics/index.html" class="item">Kinetic Energy Analysis <span>LAB 4.1</span></a>
+        <a href="physics/angular/index.html" class="item">Projectile Motion Simulation <span>LAB 4.2</span></a>
     </div>
 
-    <h2>Digital Labs</h2>
+    <h2>Mathematics</h2>
     <div class="list">
-        <a href="logic/spatial/index.html" class="item">Spatial Logic Sandbox <span>Logic A</span></a>
+        <a href="../exercises/addition_1.html" class="item">Algebraic Foundations <span class="tag">EXERCISE</span></a>
+        <a href="../exercises/multiplying_fractions.html" class="item">Fractional Logic Test <span class="tag">TEST</span></a>
+    </div>
+
+    <h2>Digital & Logic</h2>
+    <div class="list">
+        <a href="logic/spatial/index.html" class="item">Spatial Reasoning Sandbox <span class="tag">SIM</span></a>
     </div>
 </body>
 </html>
