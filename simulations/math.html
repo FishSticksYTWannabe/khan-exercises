@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathematics | Automated Curriculum</title>
+    <style>
+        body { font-family: sans-serif; background: #050a0f; color: #ccd6f6; margin: 0; padding: 10px; }
+        .nav { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #233554; padding-bottom: 10px; }
+        h2 { font-size: 14px; color: #64ffda; margin: 20px 0 10px 0; text-transform: uppercase; border-left: 3px solid #64ffda; padding-left: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+        .item { background: #112240; padding: 10px; border-radius: 4px; text-decoration: none; color: #fff; font-size: 12px; border: 1px solid #233554; display: block; transition: 0.2s; }
+        .item:hover { background: #1d2d44; border-color: #64ffda; transform: scale(1.02); }
+        .item span { display: block; font-size: 10px; color: #8892b0; margin-top: 4px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html" style="color:#64ffda; text-decoration:none; font-size:12px;">← DASHBOARD</a>
+        <span style="font-size:11px; color:#444;">DATABASE_INDEX: LOADED</span>
+    </div>
+
+    <div id="math-content">
+        <h2>Loading Full Curriculum...</h2>
+    </div>
+
+    <script>
+        // List of core files from your repo to ensure they appear first
+        const mathFiles = [
+            { name: "Addition Mastery", file: "addition_1.html", cat: "Arithmetic" },
+            { name: "Subtraction Logic", file: "subtraction_1.html", cat: "Arithmetic" },
+            { name: "Multiplication Intro", file: "multiplication_1.html", cat: "Arithmetic" },
+            { name: "Division Foundations", file: "division_1.html", cat: "Arithmetic" },
+            { name: "Linear Equations I", file: "linear_equations_1.html", cat: "Algebra" },
+            { name: "Linear Equations II", file: "linear_equations_2.html", cat: "Algebra" },
+            { name: "Fractional Products", file: "multiplying_fractions.html", cat: "Fractions" },
+            { name: "Common Denominators", file: "adding_fractions_with_common_denominators.html", cat: "Fractions" },
+            { name: "Order of Operations", file: "order_of_operations.html", cat: "Pre-Algebra" },
+            { name: "Exponents I", file: "exponents_1.html", cat: "Pre-Algebra" }
+        ];
+
+        const container = document.getElementById('math-content');
+        container.innerHTML = ""; // Clear loader
+
+        // Grouping logic
+        const categories = [...new Set(mathFiles.map(item => item.cat))];
+        
+        categories.forEach(cat => {
+            const section = document.createElement('div');
+            section.innerHTML = `<h2>${cat}</h2><div class="grid" id="grid-${cat}"></div>`;
+            container.appendChild(section);
+            
+            const grid = document.getElementById(`grid-${cat}`);
+            mathFiles.filter(f => f.cat === cat).forEach(f => {
+                grid.innerHTML += `
+                    <a href="../exercises/${f.file}" class="item">
+                        ${f.name}
+                        <span>ID: ${f.file.replace('.html', '')}</span>
+                    </a>`;
+            });
+        });
+    </script>
+</body>
+</html>
