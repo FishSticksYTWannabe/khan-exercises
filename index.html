@@ -1,82 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Student Research Portal | Secure Access</title>
+    <title>Student Portal | Dashboard</title>
     <style>
-        :root {
-            --bg-black: #0a0a0c;
-            --card-gray: #161b22;
-            --accent-blue: #2f81f7;
-            --text-main: #adbac7;
-            --text-bright: #ffffff;
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; margin: 0; background: var(--bg-black); color: var(--text-main); }
-        
-        .navbar { background: var(--card-gray); padding: 15px 40px; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: var(--accent-blue); font-weight: 600; font-size: 18px; letter-spacing: 1px; }
-
-        header { padding: 60px 20px; text-align: center; background: radial-gradient(circle at top, #1c2128 0%, #0a0a0c 100%); }
-        header h1 { color: var(--text-bright); margin: 0; font-size: 2.5rem; }
-        header p { color: #768390; margin-top: 10px; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-
-        .card { background: var(--card-gray); border: 1px solid #30363d; border-radius: 8px; padding: 25px; transition: 0.2s; position: relative; overflow: hidden; }
-        .card:hover { border-color: var(--accent-blue); transform: translateY(-3px); }
-        .card h3 { color: var(--text-bright); margin-top: 0; }
-        .card p { font-size: 14px; line-height: 1.6; color: #768390; }
-        
-        .btn { display: block; background: #21262d; border: 1px solid #f0f6fc1a; color: var(--accent-blue); text-align: center; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; transition: 0.2s; }
-        .btn:hover { background: var(--accent-blue); color: white; }
-
-        .tag { position: absolute; top: 10px; right: 10px; font-size: 10px; background: #232d38; color: var(--accent-blue); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+        body { font-family: sans-serif; background: #050a0f; color: #ccd6f6; margin: 0; padding: 10px; }
+        header { background: #0a192f; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #112240; }
+        h1 { margin: 0; font-size: 20px; color: #64ffda; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .card { background: #112240; padding: 15px; border-radius: 6px; border: 1px solid #233554; }
+        .card h2 { margin: 0 0 5px 0; font-size: 16px; color: #fff; }
+        .card p { margin: 0; font-size: 13px; color: #8892b0; line-height: 1.3; }
+        .btn { display: block; background: #64ffda; color: #0a192f; text-align: center; 
+               padding: 8px; text-decoration: none; border-radius: 4px; 
+               font-weight: bold; margin-top: 10px; font-size: 13px; }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Student Resource Hub</h1>
+    </header>
 
-<div class="navbar">
-    <div class="logo">TERMINAL // LEARNING_HUB</div>
-    <div style="font-size: 12px; color: #444;">V-4.2.0 // ENCRYPTED</div>
-</div>
-
-<header>
-    <h1>Academic Resource Directory</h1>
-    <p>Centralized repository for mathematics, science, and linguistic modules.</p>
-</header>
-
-<div class="container">
     <div class="grid">
         <div class="card">
-            <span class="tag">MATH</span>
-            <h3>Quantitative Analysis</h3>
-            <p>Interactive exercises covering Algebraic structures, Calculus, and Trigonometric functions.</p>
-            <a href="exercises/addition_1.html" class="btn">Access Data</a>
+            <h2>Mathematics</h2>
+            <p>Khan Academy exercises and practice sets.</p>
+            <a href="exercises/addition_1.html" class="btn">Open Math</a>
         </div>
-
         <div class="card">
-            <span class="tag">SCIENCE</span>
-            <h3>Applied Physics</h3>
-            <p>High-fidelity simulations for kinetic energy, vector momentum, and gravitational acceleration.</p>
-            <a href="simulations/index.html" class="btn">Launch Labs</a>
+            <h2>Science</h2>
+            <p>Physics and biology laboratory simulations.</p>
+            <a href="simulations/index.html" class="btn">Open Science</a>
         </div>
-
         <div class="card">
-            <span class="tag">LANGUAGE</span>
-            <h3>Linguistic Synthesis</h3>
-            <p>Advanced modules for structural grammar analysis and comparative literature studies.</p>
-            <a href="#" class="btn">Open Library</a>
+            <h2>Language</h2>
+            <p>Vocabulary and linguistic analysis tools.</p>
+            <a href="simulations/index.html" class="btn">Open Language</a>
         </div>
-
         <div class="card">
-            <span class="tag">TECH</span>
-            <h3>Computational Logic</h3>
-            <p>Sandbox environments for algorithmic efficiency and spatial geometry logic.</p>
-            <a href="simulations/index.html" class="btn">View Sandbox</a>
+            <h2>Digital</h2>
+            <p>Logic puzzles and spatial reasoning labs.</p>
+            <a href="simulations/index.html" class="btn">Open Digital</a>
         </div>
     </div>
-</div>
-
 </body>
 </html>
