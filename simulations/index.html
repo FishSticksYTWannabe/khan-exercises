@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module Index | STEM Simulations</title>
+    <title>Modules | STEM</title>
     <style>
-        body { font-family: sans-serif; background: #0a0a0c; color: #adbac7; margin: 0; padding: 40px; }
-        .nav-back { color: #2f81f7; text-decoration: none; font-size: 14px; }
-        h1 { color: #ffffff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        .category-group { margin-top: 40px; }
-        .category-group h2 { color: #2f81f7; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
-        .lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; }
-        .lab-link { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; text-decoration: none; color: #adbac7; transition: 0.2s; }
-        .lab-link:hover { border-color: #2f81f7; background: #1c2128; }
-        .lab-link b { display: block; color: #fff; margin-bottom: 5px; }
+        body { font-family: sans-serif; background: #050a0f; color: #ccd6f6; margin: 0; padding: 10px; }
+        .back { color: #64ffda; text-decoration: none; font-size: 12px; display: block; margin-bottom: 10px; }
+        h2 { font-size: 16px; border-bottom: 1px solid #233554; padding-bottom: 5px; margin: 15px 0 10px 0; }
+        .list { display: flex; flex-direction: column; gap: 5px; }
+        .item { background: #112240; padding: 10px; border-radius: 4px; text-decoration: none; 
+                color: #fff; display: flex; justify-content: space-between; align-items: center; border: 1px solid #112240; }
+        .item:hover { border-color: #64ffda; }
+        .item span { font-size: 12px; color: #8892b0; }
     </style>
 </head>
 <body>
-
-<a href="../index.html" class="nav-back">← Return to Main Portal</a>
-<h1>Digital Laboratory Index</h1>
-
-<div class="category-group">
-    <h2>Physics & Kinetics</h2>
-    <div class="lab-grid">
-        <a href="physics/kinetics-lab/index.html" class="lab-link">
-            <b>Lab 4.1: Vector Momentum</b>
-            Kinetic friction and velocity simulation.
-        </a>
-        <a href="physics/angular-velocity/index.html" class="lab-link">
-            <b>Lab 4.2: Angular Displacement</b>
-            Descent physics and gravitational constants.
-        </a>
+    <a href="../index.html" class="back">← Back to Home</a>
+    
+    <h2>Science Labs</h2>
+    <div class="list">
+        <a href="physics/kinetics/index.html" class="item">Physics: Vector Momentum <span>Lab 4.1</span></a>
+        <a href="physics/angular/index.html" class="item">Physics: Angular Velocity <span>Lab 4.2</span></a>
     </div>
-</div>
 
-<div class="category-group">
-    <h2>Spatial Reasoning (Logic)</h2>
-    <div class="lab-grid">
-        <a href="logic/spatial-geometry/index.html" class="lab-link">
-            <b>Module 2.1: Structural Integrity</b>
-            Geometric construction sandbox.
-        </a>
+    <h2>Language Labs</h2>
+    <div class="list">
+        <a href="language/vocab/index.html" class="item">Vocabulary Synthesis <span>Module 1</span></a>
     </div>
-</div>
 
+    <h2>Digital Labs</h2>
+    <div class="list">
+        <a href="logic/spatial/index.html" class="item">Spatial Logic Sandbox <span>Logic A</span></a>
+    </div>
 </body>
 </html>
