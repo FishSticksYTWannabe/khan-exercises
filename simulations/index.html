@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive STEM Simulations</title>
+    <title>Module Index | STEM Simulations</title>
     <style>
-        body { font-family: sans-serif; background: #e9ecef; margin: 0; padding: 20px; }
-        .header { background: #004a99; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #00a0e3; }
-        .card-content { padding: 15px; }
-        .card h3 { margin-top: 0; color: #333; font-size: 18px; }
-        .btn { display: block; background: #004a99; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 4px; font-weight: bold; }
-        .tag { font-size: 12px; color: #666; text-transform: uppercase; font-weight: bold; }
+        body { font-family: sans-serif; background: #0a0a0c; color: #adbac7; margin: 0; padding: 40px; }
+        .nav-back { color: #2f81f7; text-decoration: none; font-size: 14px; }
+        h1 { color: #ffffff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+        .category-group { margin-top: 40px; }
+        .category-group h2 { color: #2f81f7; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+        .lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; }
+        .lab-link { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; text-decoration: none; color: #adbac7; transition: 0.2s; }
+        .lab-link:hover { border-color: #2f81f7; background: #1c2128; }
+        .lab-link b { display: block; color: #fff; margin-bottom: 5px; }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>STEM Simulation Library</h1>
-    <p>Select a module to begin the interactive laboratory session.</p>
+<a href="../index.html" class="nav-back">← Return to Main Portal</a>
+<h1>Digital Laboratory Index</h1>
+
+<div class="category-group">
+    <h2>Physics & Kinetics</h2>
+    <div class="lab-grid">
+        <a href="physics/kinetics-lab/index.html" class="lab-link">
+            <b>Lab 4.1: Vector Momentum</b>
+            Kinetic friction and velocity simulation.
+        </a>
+        <a href="physics/angular-velocity/index.html" class="lab-link">
+            <b>Lab 4.2: Angular Displacement</b>
+            Descent physics and gravitational constants.
+        </a>
+    </div>
 </div>
 
-<div class="grid">
-    <div class="card">
-        <div class="card-content">
-            <span class="tag">Physics / Kinetics</span>
-            <h3>Module 4.1: Vector Momentum</h3>
-            <p>Analysis of friction and acceleration in a closed environment.</p>
-            <a href="physics/kinetics/index.html" class="btn">Launch Lab</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-content">
-            <span class="tag">Mathematics / Geometry</span>
-            <h3>Module 2.3: Spatial Logic</h3>
-            <p>Geometric construction and spatial reasoning sandbox.</p>
-            <a href="logic/spatial/index.html" class="btn">Launch Lab</a>
-        </div>
+<div class="category-group">
+    <h2>Spatial Reasoning (Logic)</h2>
+    <div class="lab-grid">
+        <a href="logic/spatial-geometry/index.html" class="lab-link">
+            <b>Module 2.1: Structural Integrity</b>
+            Geometric construction sandbox.
+        </a>
     </div>
 </div>
 
