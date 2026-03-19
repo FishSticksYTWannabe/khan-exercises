@@ -2,55 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math & Science Interactive Learning Portal</title>
+    <title>Student Learning Portal | Digital Resources</title>
     <style>
-        :root { --phet-blue: #004a99; --khan-green: #0070d2; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: #f4f7f9; color: #333; }
-        header { background: var(--phet-blue); color: white; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .hero { padding: 40px; text-align: center; background: white; border-bottom: 1px solid #ddd; }
-        .grid { display: flex; justify-content: center; gap: 30px; padding: 40px; flex-wrap: wrap; }
-        .category-card { background: white; width: 320px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s; }
-        .category-card:hover { transform: translateY(-5px); }
-        .card-header { padding: 20px; color: white; font-size: 22px; font-weight: bold; }
-        .math-head { background: var(--khan-green); }
-        .science-head { background: #00a0e3; }
-        .card-body { padding: 20px; text-align: left; }
-        .btn { display: block; text-align: center; background: #333; color: white; padding: 12px; text-decoration: none; border-radius: 6px; margin-top: 10px; }
-        .footer { text-align: center; font-size: 12px; color: #888; padding: 40px; }
+        :root {
+            --primary: #004a99;
+            --secondary: #0070d2;
+            --bg: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; margin: 0; background: var(--bg); color: #333; }
+        
+        /* Top Navigation Bar */
+        .navbar { background: white; padding: 10px 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; }
+        .logo { color: var(--primary); font-weight: bold; font-size: 20px; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #555; font-size: 14px; }
+
+        /* Hero Header */
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+        
+        /* The Grid */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        
+        /* Subject Cards */
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; border-top: 5px solid #ccc; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .card-body { padding: 20px; }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+        .card p { font-size: 0.9rem; color: #666; line-height: 1.5; }
+        .btn { display: block; background: var(--secondary); color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
+        
+        /* Colors for different subjects */
+        .math { border-color: #28a745; }
+        .physics { border-color: #ffc107; }
+        .biology { border-color: #dc3545; }
+        .logic { border-color: #17a2b8; }
+        .comp-sci { border-color: #6610f2; }
     </style>
 </head>
 <body>
 
+<div class="navbar">
+    <div class="logo">Institutional Resource Hub</div>
+    <div class="nav-links">
+        <a href="#">Syllabus</a>
+        <a href="#">Announcements</a>
+        <a href="#">Help Desk</a>
+    </div>
+</div>
+
 <header>
-    <h1>Institutional Resource Repository</h1>
+    <h1>Welcome to the Digital Learning Lab</h1>
+    <p>Select a specialized module to access interactive educational content.</p>
 </header>
 
-<div class="hero">
-    <h2>Select a Learning Domain</h2>
-    <p>Access standardized Khan Academy exercises or HTML5 Science Simulations.</p>
-</div>
+<div class="container">
+    <div class="grid">
+        <div class="card math">
+            <div class="card-body">
+                <h3>Mathematics</h3>
+                <p>Algebraic functions, geometry proofs, and calculus applications from Khan Academy.</p>
+                <a href="exercises/addition_1.html" class="btn">View Exercises</a>
+            </div>
+        </div>
 
-<div class="grid">
-    <div class="category-card">
-        <div class="card-header math-head">Mathematics</div>
-        <div class="card-body">
-            <p>Master concepts in Algebra, Geometry, and Calculus through interactive problem sets.</p>
-            <a href="exercises/addition_1.html" class="btn">View Exercises</a>
+        <div class="card physics">
+            <div class="card-body">
+                <h3>Kinetic Physics</h3>
+                <p>Laboratory simulations focusing on momentum, velocity, and vector addition.</p>
+                <a href="simulations/index.html" class="btn">Launch Physics Lab</a>
+            </div>
+        </div>
+
+        <div class="card logic">
+            <div class="card-body">
+                <h3>Spatial Reasoning</h3>
+                <p>Geometric construction modules and spatial visualization sandboxes.</p>
+                <a href="simulations/index.html" class="btn">Explore Logic Labs</a>
+            </div>
+        </div>
+
+        <div class="card biology">
+            <div class="card-body">
+                <h3>Life Sciences</h3>
+                <p>Probability modeling and genetic simulation modules for biology students.</p>
+                <a href="simulations/index.html" class="btn">Access Modules</a>
+            </div>
+        </div>
+
+        <div class="card comp-sci">
+            <div class="card-body">
+                <h3>Computer Science</h3>
+                <p>Algorithm efficiency and data structure visualization exercises.</p>
+                <a href="#" class="btn">Access Repository</a>
+            </div>
         </div>
     </div>
-
-    <div class="category-card">
-        <div class="card-header science-head">Interactive Sims</div>
-        <div class="card-body">
-            <p>Explore physics, motion, and logic through HTML5-based laboratory simulations.</p>
-            <a href="simulations/index.html" class="btn">Explore Sims</a>
-        </div>
-    </div>
 </div>
 
-<div class="footer">
-    &copy; 2024 Educational Technology Services | For Student Use Only
-</div>
+<footer style="text-align: center; padding: 40px; color: #aaa; font-size: 12px;">
+    &copy; 2024 Educational Resource Management System | v4.2.0-stable
+</footer>
 
 </body>
 </html>
