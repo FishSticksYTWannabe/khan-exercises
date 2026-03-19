@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math & Science Interactive Learning Portal</title>
+    <style>
+        :root { --phet-blue: #004a99; --khan-green: #0070d2; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: #f4f7f9; color: #333; }
+        header { background: var(--phet-blue); color: white; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .hero { padding: 40px; text-align: center; background: white; border-bottom: 1px solid #ddd; }
+        .grid { display: flex; justify-content: center; gap: 30px; padding: 40px; flex-wrap: wrap; }
+        .category-card { background: white; width: 320px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s; }
+        .category-card:hover { transform: translateY(-5px); }
+        .card-header { padding: 20px; color: white; font-size: 22px; font-weight: bold; }
+        .math-head { background: var(--khan-green); }
+        .science-head { background: #00a0e3; }
+        .card-body { padding: 20px; text-align: left; }
+        .btn { display: block; text-align: center; background: #333; color: white; padding: 12px; text-decoration: none; border-radius: 6px; margin-top: 10px; }
+        .footer { text-align: center; font-size: 12px; color: #888; padding: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Institutional Resource Repository</h1>
+</header>
+
+<div class="hero">
+    <h2>Select a Learning Domain</h2>
+    <p>Access standardized Khan Academy exercises or HTML5 Science Simulations.</p>
+</div>
+
+<div class="grid">
+    <div class="category-card">
+        <div class="card-header math-head">Mathematics</div>
+        <div class="card-body">
+            <p>Master concepts in Algebra, Geometry, and Calculus through interactive problem sets.</p>
+            <a href="exercises/addition_1.html" class="btn">View Exercises</a>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <div class="card-header science-head">Interactive Sims</div>
+        <div class="card-body">
+            <p>Explore physics, motion, and logic through HTML5-based laboratory simulations.</p>
+            <a href="simulations/index.html" class="btn">Explore Sims</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2024 Educational Technology Services | For Student Use Only
+</div>
+
+</body>
+</html>
