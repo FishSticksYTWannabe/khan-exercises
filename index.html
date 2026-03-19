@@ -2,106 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Learning Portal | Digital Resources</title>
+    <title>Student Research Portal | Secure Access</title>
     <style>
         :root {
-            --primary: #004a99;
-            --secondary: #0070d2;
-            --bg: #f8f9fa;
+            --bg-black: #0a0a0c;
+            --card-gray: #161b22;
+            --accent-blue: #2f81f7;
+            --text-main: #adbac7;
+            --text-bright: #ffffff;
         }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; margin: 0; background: var(--bg); color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; margin: 0; background: var(--bg-black); color: var(--text-main); }
         
-        /* Top Navigation Bar */
-        .navbar { background: white; padding: 10px 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; }
-        .logo { color: var(--primary); font-weight: bold; font-size: 20px; }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: #555; font-size: 14px; }
+        .navbar { background: var(--card-gray); padding: 15px 40px; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: var(--accent-blue); font-weight: 600; font-size: 18px; letter-spacing: 1px; }
 
-        /* Hero Header */
-        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+        header { padding: 60px 20px; text-align: center; background: radial-gradient(circle at top, #1c2128 0%, #0a0a0c 100%); }
+        header h1 { color: var(--text-bright); margin: 0; font-size: 2.5rem; }
+        header p { color: #768390; margin-top: 10px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+        .card { background: var(--card-gray); border: 1px solid #30363d; border-radius: 8px; padding: 25px; transition: 0.2s; position: relative; overflow: hidden; }
+        .card:hover { border-color: var(--accent-blue); transform: translateY(-3px); }
+        .card h3 { color: var(--text-bright); margin-top: 0; }
+        .card p { font-size: 14px; line-height: 1.6; color: #768390; }
         
-        /* The Grid */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
-        
-        /* Subject Cards */
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; border-top: 5px solid #ccc; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .card-body { padding: 20px; }
-        .card h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
-        .card p { font-size: 0.9rem; color: #666; line-height: 1.5; }
-        .btn { display: block; background: var(--secondary); color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
-        
-        /* Colors for different subjects */
-        .math { border-color: #28a745; }
-        .physics { border-color: #ffc107; }
-        .biology { border-color: #dc3545; }
-        .logic { border-color: #17a2b8; }
-        .comp-sci { border-color: #6610f2; }
+        .btn { display: block; background: #21262d; border: 1px solid #f0f6fc1a; color: var(--accent-blue); text-align: center; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; transition: 0.2s; }
+        .btn:hover { background: var(--accent-blue); color: white; }
+
+        .tag { position: absolute; top: 10px; right: 10px; font-size: 10px; background: #232d38; color: var(--accent-blue); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="navbar">
-    <div class="logo">Institutional Resource Hub</div>
-    <div class="nav-links">
-        <a href="#">Syllabus</a>
-        <a href="#">Announcements</a>
-        <a href="#">Help Desk</a>
-    </div>
+    <div class="logo">TERMINAL // LEARNING_HUB</div>
+    <div style="font-size: 12px; color: #444;">V-4.2.0 // ENCRYPTED</div>
 </div>
 
 <header>
-    <h1>Welcome to the Digital Learning Lab</h1>
-    <p>Select a specialized module to access interactive educational content.</p>
+    <h1>Academic Resource Directory</h1>
+    <p>Centralized repository for mathematics, science, and linguistic modules.</p>
 </header>
 
 <div class="container">
     <div class="grid">
-        <div class="card math">
-            <div class="card-body">
-                <h3>Mathematics</h3>
-                <p>Algebraic functions, geometry proofs, and calculus applications from Khan Academy.</p>
-                <a href="exercises/addition_1.html" class="btn">View Exercises</a>
-            </div>
+        <div class="card">
+            <span class="tag">MATH</span>
+            <h3>Quantitative Analysis</h3>
+            <p>Interactive exercises covering Algebraic structures, Calculus, and Trigonometric functions.</p>
+            <a href="exercises/addition_1.html" class="btn">Access Data</a>
         </div>
 
-        <div class="card physics">
-            <div class="card-body">
-                <h3>Kinetic Physics</h3>
-                <p>Laboratory simulations focusing on momentum, velocity, and vector addition.</p>
-                <a href="simulations/index.html" class="btn">Launch Physics Lab</a>
-            </div>
+        <div class="card">
+            <span class="tag">SCIENCE</span>
+            <h3>Applied Physics</h3>
+            <p>High-fidelity simulations for kinetic energy, vector momentum, and gravitational acceleration.</p>
+            <a href="simulations/index.html" class="btn">Launch Labs</a>
         </div>
 
-        <div class="card logic">
-            <div class="card-body">
-                <h3>Spatial Reasoning</h3>
-                <p>Geometric construction modules and spatial visualization sandboxes.</p>
-                <a href="simulations/index.html" class="btn">Explore Logic Labs</a>
-            </div>
+        <div class="card">
+            <span class="tag">LANGUAGE</span>
+            <h3>Linguistic Synthesis</h3>
+            <p>Advanced modules for structural grammar analysis and comparative literature studies.</p>
+            <a href="#" class="btn">Open Library</a>
         </div>
 
-        <div class="card biology">
-            <div class="card-body">
-                <h3>Life Sciences</h3>
-                <p>Probability modeling and genetic simulation modules for biology students.</p>
-                <a href="simulations/index.html" class="btn">Access Modules</a>
-            </div>
-        </div>
-
-        <div class="card comp-sci">
-            <div class="card-body">
-                <h3>Computer Science</h3>
-                <p>Algorithm efficiency and data structure visualization exercises.</p>
-                <a href="#" class="btn">Access Repository</a>
-            </div>
+        <div class="card">
+            <span class="tag">TECH</span>
+            <h3>Computational Logic</h3>
+            <p>Sandbox environments for algorithmic efficiency and spatial geometry logic.</p>
+            <a href="simulations/index.html" class="btn">View Sandbox</a>
         </div>
     </div>
 </div>
-
-<footer style="text-align: center; padding: 40px; color: #aaa; font-size: 12px;">
-    &copy; 2024 Educational Resource Management System | v4.2.0-stable
-</footer>
 
 </body>
 </html>
